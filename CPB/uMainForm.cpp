@@ -40,6 +40,8 @@
 
 #pragma link "dxScrollbarAnnotations"
 #pragma link "dxmdaset"
+#pragma link "cxContainer"
+#pragma link "cxLabel"
 #pragma resource "*.dfm"
 TMainForm *MainForm;
 //---------------------------------------------------------------------------
@@ -64,4 +66,16 @@ void __fastcall TMainForm::btnViewReportClick(TObject *Sender)
 //---------------------------------------------------------------------------
 
 
+
+void __fastcall TMainForm::btnSetLanguageUSClick(TObject *Sender)
+{
+	dxReport1->Language = "en-US";
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMainForm::btnSetLanguageDEClick(TObject *Sender)
+{
+	dxReport1->Language = "de-DE";
+}
+//---------------------------------------------------------------------------
 

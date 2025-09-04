@@ -11,7 +11,8 @@ uses
   Data.DB, cxDBData, cxGridLevel, cxGridCustomView, cxGridCustomTableView,
   cxGridTableView, cxGridDBTableView, cxGrid, FireDAC.Comp.DataSet,
   FireDAC.Comp.Client, dxReport.ConnectionString.JSON.DB,
-  dxReport.ConnectionString.JSON, Vcl.StdCtrls, dxmdaset;
+  dxReport.ConnectionString.JSON, Vcl.StdCtrls, dxmdaset, uData, cxContainer,
+  cxLabel;
 
 type
   TMainForm = class(TForm)
@@ -19,19 +20,15 @@ type
     dxReportDataConnectionManager1: TdxReportDataConnectionManager;
     btnShowDesigner: TcxButton;
     btnViewReport: TcxButton;
-    gvCategories: TcxGridDBTableView;
-    cxGrid1Level1: TcxGridLevel;
-    cxGrid1: TcxGrid;
-    dsProducts: TDataSource;
     dxReportDataConnectionManager1dxReportDataSetJSONConnection1: TdxReportDataSetJSONConnection;
     itmProducts: TdxReportDataSetCollectionItem;
     itmCategories: TdxReportDataSetCollectionItem;
-    cxGrid1Level2: TcxGridLevel;
-    gvProducts: TcxGridDBTableView;
-    dsCategories: TDataSource;
+    cxGrid1: TcxGrid;
+    gvCategories: TcxGridDBTableView;
     gvCategoriesCategoryID: TcxGridDBColumn;
     gvCategoriesCategoryName: TcxGridDBColumn;
     gvCategoriesDescription: TcxGridDBColumn;
+    gvProducts: TcxGridDBTableView;
     gvProductsProductID: TcxGridDBColumn;
     gvProductsProductName: TcxGridDBColumn;
     gvProductsSupplierID: TcxGridDBColumn;
@@ -43,25 +40,15 @@ type
     gvProductsReorderLevel: TcxGridDBColumn;
     gvProductsDiscontinued: TcxGridDBColumn;
     gvProductsEAN13: TcxGridDBColumn;
-    mdProducts: TdxMemData;
-    mdCategories: TdxMemData;
-    mdCategoriesCategoryID: TAutoIncField;
-    mdCategoriesCategoryName: TWideStringField;
-    mdCategoriesDescription: TWideMemoField;
-    mdCategoriesPicture: TBlobField;
-    mdProductsProductID: TAutoIncField;
-    mdProductsProductName: TWideStringField;
-    mdProductsSupplierID: TIntegerField;
-    mdProductsCategoryID: TIntegerField;
-    mdProductsQuantityPerUnit: TWideStringField;
-    mdProductsUnitPrice: TCurrencyField;
-    mdProductsUnitsInStock: TSmallintField;
-    mdProductsUnitsOnOrder: TSmallintField;
-    mdProductsReorderLevel: TSmallintField;
-    mdProductsDiscontinued: TBooleanField;
-    mdProductsEAN13: TWideStringField;
+    cxGrid1Level1: TcxGridLevel;
+    cxGrid1Level2: TcxGridLevel;
+    btnSetLanguageUS: TcxButton;
+    btnSetLanguageDE: TcxButton;
+    lblSelectLanguage: TcxLabel;
     procedure btnShowDesignerClick(Sender: TObject);
     procedure btnViewReportClick(Sender: TObject);
+    procedure btnSetLanguageUSClick(Sender: TObject);
+    procedure btnSetLanguageDEClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -74,6 +61,16 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TMainForm.btnSetLanguageDEClick(Sender: TObject);
+begin
+  dxReport1.Language := 'de-DE'
+end;
+
+procedure TMainForm.btnSetLanguageUSClick(Sender: TObject);
+begin
+  dxReport1.Language := 'en-US'
+end;
 
 procedure TMainForm.btnShowDesignerClick(Sender: TObject);
 begin

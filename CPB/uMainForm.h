@@ -36,6 +36,9 @@
 #include <Data.DB.hpp>
 #include <Vcl.Menus.hpp>
 #include "dxmdaset.hpp"
+#include "uData.h"
+#include "cxContainer.hpp"
+#include "cxLabel.hpp"
 //---------------------------------------------------------------------------
 class TMainForm : public TForm
 {
@@ -66,27 +69,13 @@ __published:	// IDE-managed Components
 	TdxReportDataSetJSONConnection *dxReportDataConnectionManager1dxReportDataSetJSONConnection1;
 	TdxReportDataSetCollectionItem *itmProducts;
 	TdxReportDataSetCollectionItem *itmCategories;
-	TDataSource *dsProducts;
-	TDataSource *dsCategories;
-	TdxMemData *mdProducts;
-	TAutoIncField *mdProductsProductID;
-	TWideStringField *mdProductsProductName;
-	TIntegerField *mdProductsSupplierID;
-	TIntegerField *mdProductsCategoryID;
-	TWideStringField *mdProductsQuantityPerUnit;
-	TCurrencyField *mdProductsUnitPrice;
-	TSmallintField *mdProductsUnitsInStock;
-	TSmallintField *mdProductsUnitsOnOrder;
-	TSmallintField *mdProductsReorderLevel;
-	TBooleanField *mdProductsDiscontinued;
-	TWideStringField *mdProductsEAN13;
-	TdxMemData *mdCategories;
-	TAutoIncField *mdCategoriesCategoryID;
-	TWideStringField *mdCategoriesCategoryName;
-	TWideMemoField *mdCategoriesDescription;
-	TBlobField *mdCategoriesPicture;
+	TcxButton *btnSetLanguageUS;
+	TcxButton *btnSetLanguageDE;
+	TcxLabel *lblSelectLanguage;
 	void __fastcall btnShowDesignerClick(TObject *Sender);
 	void __fastcall btnViewReportClick(TObject *Sender);
+	void __fastcall btnSetLanguageUSClick(TObject *Sender);
+	void __fastcall btnSetLanguageDEClick(TObject *Sender);
 private:	// User declarations
 protected:
     void __fastcall LoadData();
