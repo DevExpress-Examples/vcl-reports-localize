@@ -1,4 +1,4 @@
-﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
         <ProjectGuid>{6E38CE1A-E2C9-4927-BDAE-F5D067A7C6CB}</ProjectGuid>
         <MainSource>ReportLocalizationDelphi.dpr</MainSource>
