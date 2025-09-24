@@ -4,8 +4,17 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 [![](https://img.shields.io/badge/💬_Leave_Feedback-feecdd?style=flat-square)](#does-this-example-address-your-development-requirementsobjectives)
 <!-- default badges end -->
-# vcl-reports-template
- 
+# DevExpress VCL Reports - Localize Report Viewer and Report Designer UI
+
+This simple example demonstrates localization for [Report Viewer](https://docs.devexpress.com/XtraReports/401850/web-reporting/web-document-viewer) and [Report Designer](https://docs.devexpress.com/XtraReports/119176/web-reporting/web-end-user-report-designer) dialogs shipped with the [TdxReport](https://docs.devexpress.com/VCL/dxReport.TdxReport) component. UI localization strings are defined in JSON files obtained from the [DevExpress Localization Service](https://localization.devexpress.com/).
+
+<img width="1049" height="697" alt="vcl-reports-tdxreport-report-viewer-localization" src="https://github.com/user-attachments/assets/8e2366ae-501e-4b53-a8d9-865ba7155a2c" />
+
+## Documentation
+
+* [Localzie ASP Core Reporting Components](https://docs.devexpress.com/XtraReports/400932/web-reporting/common-features/localization/localization-in-asp-net-core-reporting-applications)
+* [DevExpress UI Localization Service](https://docs.devexpress.com/GeneralInformation/16235/localization/localization-service)
+
 <!-- feedback -->
 ## Does this example address your development requirements/objectives?
 
