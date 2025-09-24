@@ -12,7 +12,7 @@ This simple example demonstrates localization for [Report Viewer](https://docs.d
 
 ## Documentation
 
-* [Localzie ASP Core Reporting Components](https://docs.devexpress.com/XtraReports/400932/web-reporting/common-features/localization/localization-in-asp-net-core-reporting-applications)
+* [Localize ASP Core Reporting Components](https://docs.devexpress.com/XtraReports/400932/web-reporting/common-features/localization/localization-in-asp-net-core-reporting-applications)
 * [DevExpress UI Localization Service](https://docs.devexpress.com/GeneralInformation/16235/localization/localization-service)
 
 <!-- feedback -->
