@@ -4,9 +4,9 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 [![](https://img.shields.io/badge/💬_Leave_Feedback-feecdd?style=flat-square)](#does-this-example-address-your-development-requirementsobjectives)
 <!-- default badges end -->
-# DevExpress VCL Reports - Localize Report Viewer and Report Designer UI
+# DevExpress VCL Reports - Localize UI within Report Viewer and Report Designer
 
-This simple example demonstrates localization for [Report Viewer](https://docs.devexpress.com/XtraReports/401850/web-reporting/web-document-viewer) and [Report Designer](https://docs.devexpress.com/XtraReports/119176/web-reporting/web-end-user-report-designer) dialogs shipped with the [TdxReport](https://docs.devexpress.com/VCL/dxReport.TdxReport) component. UI localization strings are defined in JSON files obtained from the [DevExpress Localization Service](https://localization.devexpress.com/).
+This example demonstrates localization for [Report Viewer](https://docs.devexpress.com/XtraReports/401850/web-reporting/web-document-viewer) and [Report Designer](https://docs.devexpress.com/XtraReports/119176/web-reporting/web-end-user-report-designer) dialogs shipped with the [TdxReport](https://docs.devexpress.com/VCL/dxReport.TdxReport) component. German UI localization strings are stored within the project's [Localization](https://github.com/DevExpress-Examples/vcl-reports-localize/tree/25.1.4%2B/Localization) folder as JSON files. You can download UI localizations for additional languages from the [DevExpress Localization Service](https://localization.devexpress.com/).
 
 <img width="1049" height="697" alt="vcl-reports-tdxreport-report-viewer-localization" src="https://github.com/user-attachments/assets/8e2366ae-501e-4b53-a8d9-865ba7155a2c" />
 
