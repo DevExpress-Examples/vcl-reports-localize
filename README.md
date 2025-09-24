@@ -14,6 +14,7 @@ This simple example demonstrates localization for [Report Viewer](https://docs.d
 
 * [Localize ASP Core Reporting Components](https://docs.devexpress.com/XtraReports/400932/web-reporting/common-features/localization/localization-in-asp-net-core-reporting-applications)
 * [DevExpress UI Localization Service](https://docs.devexpress.com/GeneralInformation/16235/localization/localization-service)
+* [TdxReport.Language Property](https://docs.devexpress.com/VCL/dxReport.TdxReport.Language)
 
 <!-- feedback -->
 ## Does this example address your development requirements/objectives?
