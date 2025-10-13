@@ -12,7 +12,8 @@ This example localizes DevExpress VCL [Report Viewer](https://docs.devexpress.co
 
 ## Documentation
 
-* [Localize ASP Core Reporting Components](https://docs.devexpress.com/XtraReports/400932/web-reporting/common-features/localization/localization-in-asp-net-core-reporting-applications)
+* [VCL Report Viewer and Designer UI Localization](https://docs.devexpress.com/VCL/405598/ExpressReports/localization/vcl-report-viewer-and-designer-localization)
+* [VCL Reports Localization](https://docs.devexpress.com/VCL/405597/ExpressReports/vcl-reports-localization)
 * [DevExpress UI Localization Service](https://docs.devexpress.com/GeneralInformation/16235/localization/localization-service)
 * [TdxReport.Language Property](https://docs.devexpress.com/VCL/dxReport.TdxReport.Language)
 
