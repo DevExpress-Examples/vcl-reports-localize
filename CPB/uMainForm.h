@@ -28,9 +28,6 @@
 #include "cxNavigator.hpp"
 #include "cxStyles.hpp"
 #include "dxDateRanges.hpp"
-#include "dxReport.Backend.hpp"
-#include "dxReport.ConnectionString.JSON.DB.hpp"
-#include "dxReport.ConnectionString.JSON.hpp"
 #include "dxReport.hpp"
 #include "dxScrollbarAnnotations.hpp"
 #include <Data.DB.hpp>
@@ -39,6 +36,9 @@
 #include "uData.h"
 #include "cxContainer.hpp"
 #include "cxLabel.hpp"
+#include "dxBackend.ConnectionString.JSON.DataSet.hpp"
+#include "dxBackend.ConnectionString.JSON.hpp"
+#include "dxBackend.hpp"
 //---------------------------------------------------------------------------
 class TMainForm : public TForm
 {
@@ -65,10 +65,10 @@ __published:	// IDE-managed Components
 	TcxGridLevel *cxGrid1Level1;
 	TcxGridLevel *cxGrid1Level2;
 	TdxReport *dxReport1;
-	TdxReportDataConnectionManager *dxReportDataConnectionManager1;
-	TdxReportDataSetJSONConnection *dxReportDataConnectionManager1dxReportDataSetJSONConnection1;
-	TdxReportDataSetCollectionItem *itmProducts;
-	TdxReportDataSetCollectionItem *itmCategories;
+	TdxBackendDataConnectionManager *dxBackendDataConnectionManager1;
+	TdxBackendDataSetJSONConnection *dxBackendDataConnectionManager1dxBackendDataSetJSONConnection1;
+	TdxBackendDataSetCollectionItem *itmProducts;
+	TdxBackendDataSetCollectionItem *itmCategories;
 	TcxButton *btnSetLanguageUS;
 	TcxButton *btnSetLanguageDE;
 	TcxLabel *lblSelectLanguage;
