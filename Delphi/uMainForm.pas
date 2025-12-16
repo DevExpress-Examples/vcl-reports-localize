@@ -6,23 +6,23 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, cxClasses, dxReport, cxGraphics,
   cxLookAndFeels, cxLookAndFeelPainters, Vcl.Menus,  cxButtons,
-  dxBackend, cxControls, cxStyles, cxCustomData, cxFilter, cxData,
+  dxReport.Backend, cxControls, cxStyles, cxCustomData, cxFilter, cxData,
   cxDataStorage, cxEdit, cxNavigator, dxDateRanges, dxScrollbarAnnotations,
   Data.DB, cxDBData, cxGridLevel, cxGridCustomView, cxGridCustomTableView,
   cxGridTableView, cxGridDBTableView, cxGrid, FireDAC.Comp.DataSet,
-  FireDAC.Comp.Client, dxBackend.ConnectionString.JSON.DataSet,
-  dxBackend.ConnectionString.JSON, Vcl.StdCtrls, dxmdaset, uData, cxContainer,
+  FireDAC.Comp.Client, dxReport.ConnectionString.JSON.DB,
+  dxReport.ConnectionString.JSON, Vcl.StdCtrls, dxmdaset, uData, cxContainer,
   cxLabel;
 
 type
   TMainForm = class(TForm)
     dxReport1: TdxReport;
-    dxBackendDataConnectionManager1: TdxBackendDataConnectionManager;
+    dxReportDataConnectionManager1: TdxReportDataConnectionManager;
     btnShowDesigner: TcxButton;
     btnViewReport: TcxButton;
-    dxBackendDataConnectionManager1dxBackendDataSetJSONConnection1: TdxBackendDataSetJSONConnection;
-    itmProducts: TdxBackendDataSetCollectionItem;
-    itmCategories: TdxBackendDataSetCollectionItem;
+    dxReportDataConnectionManager1dxReportDataSetJSONConnection1: TdxReportDataSetJSONConnection;
+    itmProducts: TdxReportDataSetCollectionItem;
+    itmCategories: TdxReportDataSetCollectionItem;
     cxGrid1: TcxGrid;
     gvCategories: TcxGridDBTableView;
     gvCategoriesCategoryID: TcxGridDBColumn;
