@@ -36,13 +36,8 @@ object MainForm: TMainForm
     Height = 265
     TabOrder = 2
     object gvCategories: TcxGridDBTableView
-      Navigator.Buttons.CustomButtons = <>
-      ScrollbarAnnotations.CustomAnnotations = <>
       DataController.DataSource = DataModule1.dsCategories
       DataController.KeyFieldNames = 'CategoryID'
-      DataController.Summary.DefaultGroupSummaryItems = <>
-      DataController.Summary.FooterSummaryItems = <>
-      DataController.Summary.SummaryGroups = <>
       object gvCategoriesCategoryID: TcxGridDBColumn
         DataBinding.FieldName = 'CategoryID'
       end
@@ -54,15 +49,10 @@ object MainForm: TMainForm
       end
     end
     object gvProducts: TcxGridDBTableView
-      Navigator.Buttons.CustomButtons = <>
-      ScrollbarAnnotations.CustomAnnotations = <>
       DataController.DataSource = DataModule1.dsProducts
       DataController.DetailKeyFieldNames = 'CategoryID'
       DataController.KeyFieldNames = 'ProductID'
       DataController.MasterKeyFieldNames = 'CategoryID'
-      DataController.Summary.DefaultGroupSummaryItems = <>
-      DataController.Summary.FooterSummaryItems = <>
-      DataController.Summary.SummaryGroups = <>
       object gvProductsProductID: TcxGridDBColumn
         DataBinding.FieldName = 'ProductID'
       end
@@ -133,19 +123,20 @@ object MainForm: TMainForm
     TabOrder = 5
   end
   object dxReport1: TdxReport
+    Parameters = <>
     Left = 48
     Top = 128
   end
-  object dxReportDataConnectionManager1: TdxReportDataConnectionManager
+  object dxBackendDataConnectionManager1: TdxBackendDataConnectionManager
     Left = 112
     Top = 128
-    object dxReportDataConnectionManager1dxReportDataSetJSONConnection1: TdxReportDataSetJSONConnection
+    object dxBackendDataConnectionManager1dxBackendDataSetJSONConnection1: TdxBackendDataSetJSONConnection
       DisplayName = 'DataSetConnection'
-      object itmProducts: TdxReportDataSetCollectionItem
+      object itmProducts: TdxBackendDataSetCollectionItem
         DataSet = DataModule1.mdProducts
         DataSetAlias = 'mdProducts'
       end
-      object itmCategories: TdxReportDataSetCollectionItem
+      object itmCategories: TdxBackendDataSetCollectionItem
         DataSet = DataModule1.mdCategories
         DataSetAlias = 'mdCategories'
       end
