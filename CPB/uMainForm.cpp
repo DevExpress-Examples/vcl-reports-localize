@@ -1,76 +1,64 @@
-//---------------------------------------------------------------------------
-
 #include <vcl.h>
 #pragma hdrstop
 
 #include "uMainForm.h"
-//---------------------------------------------------------------------------
+
 #pragma package(smart_init)
 #pragma link "cxButtons"
 #pragma link "cxClasses"
 #pragma link "cxControls"
-#pragma link "cxCustomData"
-#pragma link "cxData"
-#pragma link "cxDataStorage"
-#pragma link "cxDBData"
-#pragma link "cxEdit"
-#pragma link "cxFilter"
 #pragma link "cxGraphics"
-#pragma link "cxGrid"
-#pragma link "cxGridCustomTableView"
-#pragma link "cxGridCustomView"
-#pragma link "cxGridDBTableView"
-#pragma link "cxGridLevel"
-#pragma link "cxGridTableView"
 #pragma link "cxLookAndFeelPainters"
 #pragma link "cxLookAndFeels"
-#pragma link "cxNavigator"
-#pragma link "cxStyles"
-#pragma link "dxDateRanges"
 #pragma link "dxReport"
-
-
-#pragma link "dxScrollbarAnnotations"
 #pragma link "dxmdaset"
 #pragma link "cxContainer"
-#pragma link "cxLabel"
+#pragma link "cxRadioGroup"
+#pragma link "cxGroupBox"
 #pragma link "dxBackend"
 #pragma link "dxBackend.ConnectionString.JSON"
 #pragma link "dxBackend.ConnectionString.JSON.DataSet"
 #pragma resource "*.dfm"
 TMainForm *MainForm;
-//---------------------------------------------------------------------------
+
 __fastcall TMainForm::TMainForm(TComponent* Owner)
 	: TForm(Owner)
 {
-
 }
-//---------------------------------------------------------------------------
 
-//---------------------------------------------------------------------------
-void __fastcall TMainForm::btnShowDesignerClick(TObject *Sender)
+void __fastcall TMainForm::FormCreate(TObject *Sender)
 {
+	// Path to a saved example report file
+	const String AFileName = "ExampleReport.repx";
+
+	// Load example report from a file
+	if (FileExists(AFileName))
+	{
+		dxReport1->ReportName = "ExampleReport";
+		dxReport1->Layout->LoadFromFile(AFileName);
+	}
+}
+
+void __fastcall TMainForm::btnDisplayDesignerClick(TObject *Sender)
+{
+	// Display the DevExpress Report Designer dialog
 	dxReport1->ShowDesigner();
 }
-//---------------------------------------------------------------------------
 
-void __fastcall TMainForm::btnViewReportClick(TObject *Sender)
+void __fastcall TMainForm::btnDisplayReportClick(TObject *Sender)
 {
+	// Display the DevExpress Report Viewer dialog
 	dxReport1->ShowViewer();
 }
-//---------------------------------------------------------------------------
 
-
-
-void __fastcall TMainForm::btnSetLanguageUSClick(TObject *Sender)
+void __fastcall TMainForm::rbtnSelectEnglishLocalizationClick(TObject *Sender)
 {
+	// Switch Report UI to English
 	dxReport1->Language = "en-US";
 }
-//---------------------------------------------------------------------------
 
-void __fastcall TMainForm::btnSetLanguageDEClick(TObject *Sender)
+void __fastcall TMainForm::rbtnSelectGermanLocalizationClick(TObject *Sender)
 {
+	// Switch Report UI to German
 	dxReport1->Language = "de-DE";
 }
-//---------------------------------------------------------------------------
-
