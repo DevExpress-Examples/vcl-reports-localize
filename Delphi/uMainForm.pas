@@ -12,43 +12,26 @@ uses
   cxGridTableView, cxGridDBTableView, cxGrid, FireDAC.Comp.DataSet,
   FireDAC.Comp.Client, dxBackend.ConnectionString.JSON.DataSet,
   dxBackend.ConnectionString.JSON, Vcl.StdCtrls, dxmdaset, uData, cxContainer,
-  cxLabel;
+  cxLabel, cxRadioGroup, cxGroupBox;
 
 type
   TMainForm = class(TForm)
     dxReport1: TdxReport;
     dxBackendDataConnectionManager1: TdxBackendDataConnectionManager;
-    btnShowDesigner: TcxButton;
-    btnViewReport: TcxButton;
+    btnDisplayDesigner: TcxButton;
+    btnDisplayReport: TcxButton;
     dxBackendDataConnectionManager1dxBackendDataSetJSONConnection1: TdxBackendDataSetJSONConnection;
     itmProducts: TdxBackendDataSetCollectionItem;
     itmCategories: TdxBackendDataSetCollectionItem;
-    cxGrid1: TcxGrid;
-    gvCategories: TcxGridDBTableView;
-    gvCategoriesCategoryID: TcxGridDBColumn;
-    gvCategoriesCategoryName: TcxGridDBColumn;
-    gvCategoriesDescription: TcxGridDBColumn;
-    gvProducts: TcxGridDBTableView;
-    gvProductsProductID: TcxGridDBColumn;
-    gvProductsProductName: TcxGridDBColumn;
-    gvProductsSupplierID: TcxGridDBColumn;
-    gvProductsCategoryID: TcxGridDBColumn;
-    gvProductsQuantityPerUnit: TcxGridDBColumn;
-    gvProductsUnitPrice: TcxGridDBColumn;
-    gvProductsUnitsInStock: TcxGridDBColumn;
-    gvProductsUnitsOnOrder: TcxGridDBColumn;
-    gvProductsReorderLevel: TcxGridDBColumn;
-    gvProductsDiscontinued: TcxGridDBColumn;
-    gvProductsEAN13: TcxGridDBColumn;
-    cxGrid1Level1: TcxGridLevel;
-    cxGrid1Level2: TcxGridLevel;
-    btnSetLanguageUS: TcxButton;
-    btnSetLanguageDE: TcxButton;
-    lblSelectLanguage: TcxLabel;
-    procedure btnShowDesignerClick(Sender: TObject);
-    procedure btnViewReportClick(Sender: TObject);
-    procedure btnSetLanguageUSClick(Sender: TObject);
-    procedure btnSetLanguageDEClick(Sender: TObject);
+    rbtnGroupLocalization: TcxRadioGroup;
+    rbtnSelectEnglishLocalization: TcxRadioButton;
+    rbtnSelectGermanLocalization: TcxRadioButton;
+    btnGroupDisplayDialog: TcxGroupBox;
+    procedure FormCreate(Sender: TObject);
+    procedure btnDisplayDesignerClick(Sender: TObject);
+    procedure btnDisplayReportClick(Sender: TObject);
+    procedure rbtnSelectEnglishLocalizationClick(Sender: TObject);
+    procedure rbtnSelectGermanLocalizationClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -62,24 +45,41 @@ implementation
 
 {$R *.dfm}
 
-procedure TMainForm.btnSetLanguageDEClick(Sender: TObject);
+procedure TMainForm.FormCreate(Sender: TObject);
+const
+  // Path to a saved example report file
+  AFileName = 'ExampleReport.repx';
 begin
-  dxReport1.Language := 'de-DE'
+  // Load example report from a file
+  if FileExists(AFileName) then
+  begin
+    dxReport1.ReportName := 'ExampleReport';
+    dxReport1.Layout.LoadFromFile(AFileName);
+  end;
 end;
 
-procedure TMainForm.btnSetLanguageUSClick(Sender: TObject);
+procedure TMainForm.btnDisplayDesignerClick(Sender: TObject);
 begin
-  dxReport1.Language := 'en-US'
-end;
-
-procedure TMainForm.btnShowDesignerClick(Sender: TObject);
-begin
+  // Display the DevExpress Report Designer dialog
   dxReport1.ShowDesigner;
 end;
 
-procedure TMainForm.btnViewReportClick(Sender: TObject);
+procedure TMainForm.btnDisplayReportClick(Sender: TObject);
 begin
+  // Display the DevExpress Report Viewer dialog
   dxReport1.ShowViewer;
+end;
+
+procedure TMainForm.rbtnSelectEnglishLocalizationClick(Sender: TObject);
+begin
+  // Switch Report UI to English
+  dxReport1.Language := 'en-US';
+end;
+
+procedure TMainForm.rbtnSelectGermanLocalizationClick(Sender: TObject);
+begin
+  // Switch Report UI to German
+  dxReport1.Language := 'de-DE';
 end;
 
 end.
