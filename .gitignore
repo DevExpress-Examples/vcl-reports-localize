@@ -98,12 +98,9 @@ __recovery/
 *.identcache
 
 # Build output directories
-Win32/Debug/
-Win32/Release/
-Win64/Debug/
-Win64/Release/
-Win64x/Debug/
-Win64x/Release/
+Win32/
+Win64/
+Win64x/
 
 # Castalia statistics file (since XE7 Castalia is distributed with Delphi)
 *.stat
