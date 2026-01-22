@@ -10,32 +10,17 @@
 #include "cxButtons.hpp"
 #include "cxClasses.hpp"
 #include "cxControls.hpp"
-#include "cxCustomData.hpp"
-#include "cxData.hpp"
-#include "cxDataStorage.hpp"
-#include "cxDBData.hpp"
-#include "cxEdit.hpp"
-#include "cxFilter.hpp"
 #include "cxGraphics.hpp"
-#include "cxGrid.hpp"
-#include "cxGridCustomTableView.hpp"
-#include "cxGridCustomView.hpp"
-#include "cxGridDBTableView.hpp"
-#include "cxGridLevel.hpp"
-#include "cxGridTableView.hpp"
 #include "cxLookAndFeelPainters.hpp"
 #include "cxLookAndFeels.hpp"
-#include "cxNavigator.hpp"
-#include "cxStyles.hpp"
-#include "dxDateRanges.hpp"
 #include "dxReport.hpp"
-#include "dxScrollbarAnnotations.hpp"
 #include <Data.DB.hpp>
 #include <Vcl.Menus.hpp>
 #include "dxmdaset.hpp"
 #include "uData.h"
 #include "cxContainer.hpp"
-#include "cxLabel.hpp"
+#include "cxRadioGroup.hpp"
+#include "cxGroupBox.hpp"
 #include "dxBackend.ConnectionString.JSON.DataSet.hpp"
 #include "dxBackend.ConnectionString.JSON.hpp"
 #include "dxBackend.hpp"
@@ -43,42 +28,23 @@
 class TMainForm : public TForm
 {
 __published:	// IDE-managed Components
-	TcxButton *btnShowDesigner;
-	TcxButton *btnViewReport;
-	TcxGrid *cxGrid1;
-	TcxGridDBTableView *gvCategories;
-	TcxGridDBColumn *gvCategoriesCategoryID;
-	TcxGridDBColumn *gvCategoriesCategoryName;
-	TcxGridDBColumn *gvCategoriesDescription;
-	TcxGridDBTableView *gvProducts;
-	TcxGridDBColumn *gvProductsProductID;
-	TcxGridDBColumn *gvProductsProductName;
-	TcxGridDBColumn *gvProductsSupplierID;
-	TcxGridDBColumn *gvProductsCategoryID;
-	TcxGridDBColumn *gvProductsQuantityPerUnit;
-	TcxGridDBColumn *gvProductsUnitPrice;
-	TcxGridDBColumn *gvProductsUnitsInStock;
-	TcxGridDBColumn *gvProductsUnitsOnOrder;
-	TcxGridDBColumn *gvProductsReorderLevel;
-	TcxGridDBColumn *gvProductsDiscontinued;
-	TcxGridDBColumn *gvProductsEAN13;
-	TcxGridLevel *cxGrid1Level1;
-	TcxGridLevel *cxGrid1Level2;
+	TcxGroupBox *btnGroupDisplayDialog;
+	TcxButton *btnDisplayReport;
+	TcxButton *btnDisplayDesigner;
+	TcxRadioGroup *rbtnGroupLocalization;
+	TcxRadioButton *rbtnSelectEnglishLocalization;
+	TcxRadioButton *rbtnSelectGermanLocalization;
 	TdxReport *dxReport1;
 	TdxBackendDataConnectionManager *dxBackendDataConnectionManager1;
 	TdxBackendDataSetJSONConnection *dxBackendDataConnectionManager1dxBackendDataSetJSONConnection1;
 	TdxBackendDataSetCollectionItem *itmProducts;
 	TdxBackendDataSetCollectionItem *itmCategories;
-	TcxButton *btnSetLanguageUS;
-	TcxButton *btnSetLanguageDE;
-	TcxLabel *lblSelectLanguage;
-	void __fastcall btnShowDesignerClick(TObject *Sender);
-	void __fastcall btnViewReportClick(TObject *Sender);
-	void __fastcall btnSetLanguageUSClick(TObject *Sender);
-	void __fastcall btnSetLanguageDEClick(TObject *Sender);
+	void __fastcall FormCreate(TObject *Sender);
+	void __fastcall btnDisplayDesignerClick(TObject *Sender);
+	void __fastcall btnDisplayReportClick(TObject *Sender);
+	void __fastcall rbtnSelectEnglishLocalizationClick(TObject *Sender);
+	void __fastcall rbtnSelectGermanLocalizationClick(TObject *Sender);
 private:	// User declarations
-protected:
-    void __fastcall LoadData();
 public:		// User declarations
 	__fastcall TMainForm(TComponent* Owner);
 };
