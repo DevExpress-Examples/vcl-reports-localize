@@ -12,7 +12,7 @@ uses
   cxGridTableView, cxGridDBTableView, cxGrid, FireDAC.Comp.DataSet,
   FireDAC.Comp.Client, dxBackend.ConnectionString.JSON.DataSet,
   dxBackend.ConnectionString.JSON, Vcl.StdCtrls, dxmdaset, uData, cxContainer,
-  cxLabel, cxRadioGroup, cxGroupBox;
+  cxLabel, cxRadioGroup, cxGroupBox, dxCore, dxSkinsForm;
 
 type
   TMainForm = class(TForm)
@@ -27,6 +27,7 @@ type
     rbtnSelectEnglishLocalization: TcxRadioButton;
     rbtnSelectGermanLocalization: TcxRadioButton;
     btnGroupDisplayDialog: TcxGroupBox;
+    dxSkinController1: TdxSkinController;
     procedure FormCreate(Sender: TObject);
     procedure btnDisplayDesignerClick(Sender: TObject);
     procedure btnDisplayReportClick(Sender: TObject);
