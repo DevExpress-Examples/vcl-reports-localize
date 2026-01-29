@@ -882,9 +882,9 @@ object MainForm: TMainForm
     Width = 193
     object rbtnSelectEnglishLocalization: TcxRadioButton
       Left = 16
-      Top = 25
+      Top = 21
       Width = 113
-      Height = 17
+      Height = 25
       Caption = 'English (en-US)'
       Checked = True
       TabOrder = 0
@@ -893,9 +893,9 @@ object MainForm: TMainForm
     end
     object rbtnSelectGermanLocalization: TcxRadioButton
       Left = 16
-      Top = 56
+      Top = 52
       Width = 113
-      Height = 17
+      Height = 25
       Caption = 'German (de-DE)'
       TabOrder = 1
       OnClick = rbtnSelectGermanLocalizationClick
@@ -920,5 +920,12 @@ object MainForm: TMainForm
         DataSetAlias = 'mdCategories'
       end
     end
+  end
+  object dxSkinController1: TdxSkinController
+    SkinName = 'WXICompact'
+    FormCorners = fcRectangular
+    SkinPaletteName = 'Sharpness'
+    Left = 455
+    Top = 32
   end
 end

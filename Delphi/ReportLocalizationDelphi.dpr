@@ -3,7 +3,8 @@ program ReportLocalizationDelphi;
 uses
   Vcl.Forms,
   uMainForm in 'uMainForm.pas' {MainForm},
-  uData in 'uData.pas' {DataModule1: TDataModule};
+  uData in 'uData.pas' {DataModule1: TDataModule},
+  ReportLocalizationDelphi.dxSettings in 'ReportLocalizationDelphi.dxSettings.pas';
 
 {$R *.res}
 
