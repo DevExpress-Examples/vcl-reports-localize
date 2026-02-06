@@ -5,7 +5,7 @@
 [![](https://img.shields.io/badge/💬_Leave_Feedback-feecdd?style=flat-square)](#does-this-example-address-your-development-requirementsobjectives)
 <!-- default badges end -->
 
-# DevExpress VCL Reports—Localize the Report Viewer and Report Designer
+# DevExpress VCL Reports — Localize the Report Viewer and Report Designer
 
 This example localizes DevExpress VCL Reports components.
 
@@ -15,7 +15,7 @@ The localization example in this repository gives users a choice between English
 [Report Designer](https://docs.devexpress.com/XtraReports/119176/web-reporting/web-end-user-report-designer).
 The example includes projects for both [Delphi](./Delphi) and [C++Builder](./CPB).
 
-![Start screen of the localization example, offering to select between English and German, and to display Report Designer and Report Viewer dialogs](./images/Lokalisierungsbeispiel.png)
+<img width="450" src="./images/Lokalisierungsbeispiel.png" alt="Start screen of the localization example, offering to select between English and German, and to display Report Designer and Report Viewer dialogs" />
 
 ## Prerequisites
 
@@ -83,11 +83,11 @@ The DevExpress VCL library components support localization using [resource files
 
 ## Localized Report Dialogs Preview
 
-Localized Report Designer:
+**Localized Report Designer:**
 
 ![VCL Report Designer dialog with interface localized into German](./images/Berichtsdesigner.png)
 
-Localized Report Viewer:
+**Localized Report Viewer:**
 
 ![VCL Report Viewer dialog with interface localized into German](./images/Berichtsanzeige.png)
 
