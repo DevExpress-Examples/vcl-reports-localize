@@ -29,7 +29,7 @@ and to display Report Designer and Report Viewer dialogs" />
 To localize the DevExpress Report Designer and Report Viewer in your Delphi or C++Builder application,
 you must:
 
-1.  Use the [DevExpress UI Localization Service][localization-service]
+1.  Use the [DevExpress UI Localization Service][l10n-service]
     to obtain localization files for DevExpress VCL Report Viewer and Designer.
     These files contain UI string translations for specific languages/locales.
     Refer to the following guide to learn more:
